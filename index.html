@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loader Modal</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="index.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1>This is a modal</h1>
+    <div class="modal" onclick="closeModal()">
+      <div
+        onclick="event.stopPropagation()"
+        class="contant animate__animated animate__fadeInDown"
+      >
+        <form onsubmit="event.preventDefault()">
+          <h2>-Data-</h2>
+          <input class="name" type="text" placeholder="Enter your name" />
+          <input class="age" type="number" placeholder="Enter your age" />
+          <div class="button">
+            <button onclick="closeModal(),clearInput()">Save</button>
+            <button onclick="closeModal(),clearInput()">Close</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <button onclick="openModal()">Open Modal</button>
+    <img src="loading.gif" />
+    <script src="index.js"></script>
+  </body>
+</html>
